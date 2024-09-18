@@ -98,10 +98,10 @@ export default function Generate() {
   const handleCloseDialog = () => setDialogOpen(false)
 
   return (
-    <Container maxWidth="md">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Generate Flashcards
+    <Container maxWidth="md" sx={{ backgroundColor: '#000000', padding: '200px'}}>
+      <Box sx={{ my: 4}}>
+        <Typography variant="h4" component="h1" gutterBottom sx={{ color: 'white' }}>
+          Generate Flashcards 
         </Typography>
         <TextField
           value={text}
@@ -111,13 +111,15 @@ export default function Generate() {
           multiline
           rows={4}
           variant="outlined"
-          sx={{ mb: 2 }}
+          sx={{ mb: 2, backgroundColor: 'white' }}
+          
         />
         <Button
           variant="contained"
           color="primary"
           onClick={handleSubmit}
           fullWidth
+          
         >
           Generate Flashcards
         </Button>
